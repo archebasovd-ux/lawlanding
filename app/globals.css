@@ -1,0 +1,330 @@
+@import "tailwindcss";
+
+@theme {
+  /* Палитра «Гарантия защиты» — глубокий индиго + электрический синий/фиолет */
+  --color-ink-950: #060818;
+  --color-ink-900: #0a0e27;
+  --color-ink-800: #10153a;
+  --color-ink-700: #181e4d;
+  --color-ink-600: #232a63;
+  --color-line: #232a63;
+  --color-accent-400: #6d8bff;
+  --color-accent-500: #4a6cf7;
+  --color-accent-600: #3b53d9;
+  --color-violet-450: #8b5cf6;
+  --color-mist-100: #eef1ff;
+  --color-mist-300: #c3cbe8;
+  --color-mist-500: #8a93bd;
+  --font-sans: var(--font-sans-var), "Manrope", system-ui, sans-serif;
+  --font-display: var(--font-display-var), "Cormorant Garamond", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink-950);
+  color: var(--color-mist-100);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent-500);
+  color: #fff;
+}
+
+/* ---------- Типографика ---------- */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.text-brand-gradient {
+  background: linear-gradient(92deg, #6d8bff 0%, #4a6cf7 45%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(92deg, #4a6cf7 0%, #5f5cf0 60%, #8b5cf6 100%);
+}
+
+/* ---------- Кнопки: элегантные «пилюли» как в референсе ---------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 3px;
+  padding: 1rem 2.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(92deg, #4a6cf7 0%, #5f5cf0 60%, #8b5cf6 100%);
+  box-shadow: 0 8px 30px rgba(74, 108, 247, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(74, 108, 247, 0.5);
+}
+.btn-primary:disabled {
+  opacity: 0.4;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 3px;
+  padding: 1rem 2.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-mist-100);
+  border: 1px solid rgba(109, 139, 255, 0.35);
+  background: rgba(16, 21, 58, 0.4);
+  backdrop-filter: blur(6px);
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+.btn-ghost:hover {
+  border-color: rgba(109, 139, 255, 0.7);
+  background: rgba(24, 30, 77, 0.6);
+  transform: translateY(-2px);
+}
+
+/* ---------- Карточки: сдержанные, тонкая линия, без «вайбкодерских» градиентов ---------- */
+.card-surface {
+  background: rgba(16, 21, 58, 0.45);
+  border: 1px solid rgba(109, 139, 255, 0.12);
+  border-radius: 4px;
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+.card-surface:hover {
+  border-color: rgba(109, 139, 255, 0.35);
+  background: rgba(24, 30, 77, 0.55);
+}
+
+/* ---------- Фоновые текстуры ---------- */
+.dot-grid {
+  background-image: radial-gradient(rgba(109, 139, 255, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Радиальная сетка точек как в референсе-макете */
+.dot-halo {
+  background-image: radial-gradient(rgba(109, 139, 255, 0.28) 1px, transparent 1.5px);
+  background-size: 14px 14px;
+  mask-image: radial-gradient(ellipse 60% 55% at 50% 40%, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 40%, black 0%, transparent 70%);
+}
+
+/* Широкий контейнер сайта — используем ширину страницы */
+.container-site {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1360px;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .container-site {
+    padding-inline: 3rem;
+  }
+}
+
+/* Тонкая декоративная линия-разделитель */
+.hairline {
+  border-color: rgba(109, 139, 255, 0.14);
+}
+
+/* Подпись-eyebrow над заголовком секции */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent-400);
+}
+
+/* ---------- Анимации появления ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Подсветка кейса при переходе по якорю с главной */
+.card-surface:target {
+  border-color: rgba(109, 139, 255, 0.45);
+  box-shadow: 0 0 0 1px rgba(109, 139, 255, 0.2);
+}
+
+/* Живость карточек: подъём + свечение иконки */
+.card-surface {
+  transform: translateY(0);
+}
+.card-surface:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 44px rgba(10, 14, 39, 0.6), 0 0 0 1px rgba(109, 139, 255, 0.18);
+}
+.card-icon {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+}
+.card-surface:hover .card-icon {
+  transform: scale(1.12) rotate(-4deg);
+  filter: drop-shadow(0 0 14px rgba(109, 139, 255, 0.55));
+}
+
+/* Пульсация кнопки play в видео-блоке */
+@keyframes play-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(109, 139, 255, 0.45); }
+  70% { box-shadow: 0 0 0 18px rgba(109, 139, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(109, 139, 255, 0); }
+}
+.play-pulse {
+  animation: play-pulse 2.4s ease-out infinite;
+}
+
+/* Пунктирная линия роудмапа «прорисовывается» */
+@keyframes roadmap-grow {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+.roadmap-line {
+  border-top: 2px dashed rgba(109, 139, 255, 0.55);
+  animation: roadmap-grow 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
+}
+.roadmap-line-vertical {
+  border-left: 2px dashed rgba(109, 139, 255, 0.55);
+}
+
+/* Точка-поинт на линии роудмапа */
+.roadmap-dot {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border-radius: 999px;
+  background: var(--color-ink-950);
+  border: 3px solid var(--color-accent-500);
+  box-shadow: 0 0 14px rgba(74, 108, 247, 0.6);
+}
+
+/* Логотип: свечение, чтобы не сливался с тёмной шапкой */
+.logo-icon {
+  filter:
+    drop-shadow(0 0 8px rgba(109, 139, 255, 0.85))
+    drop-shadow(0 0 22px rgba(139, 92, 246, 0.5));
+}
+
+/* «Бегущий» пунктир маршрута — как анимированный путь на карте */
+@keyframes dash-march {
+  to { stroke-dashoffset: -28; }
+}
+.route-path {
+  stroke-dasharray: 3 14;
+  stroke-linecap: round;
+  animation: dash-march 1.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-path {
+    animation: none;
+  }
+}
+
+/* ---------- Кинематографические эффекты ---------- */
+/* Плёночное зерно поверх hero */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Виньетка по краям hero */
+.vignette {
+  background: radial-gradient(ellipse 75% 65% at 50% 42%, transparent 55%, rgba(6, 8, 24, 0.55) 100%);
+  pointer-events: none;
+}
+
+/* Параллакс-свечение hero (двигается скриптом HeroEffects) */
+.hero-glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Фоновые фото-текстуры секций на низкой прозрачности */
+.section-texture {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.section-texture img {
+  object-fit: cover;
+  opacity: 0.14;
+}
+.section-texture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--color-ink-950) 0%, rgba(6, 8, 24, 0.55) 50%, var(--color-ink-950) 100%);
+}
+
+/* ---------- Marquee-лента ---------- */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+}
+.marquee:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+  }
+}
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-inline: 1.25rem;
+  white-space: nowrap;
+}
+.marquee-star {
+  color: var(--color-accent-500);
+  font-size: 0.7em;
+}
