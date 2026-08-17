@@ -35,12 +35,6 @@ export default function Home() {
 
         <div className="container-site relative flex min-h-[85vh] flex-col justify-center py-24">
           <div className="max-w-2xl">
-            <Reveal>
-              <p className="eyebrow flex items-center gap-3">
-                <span className="inline-block h-px w-10 bg-accent-500" />
-                Адвокат · {site.city}
-              </p>
-            </Reveal>
             <Reveal delay={120}>
               <h1 className="font-display mt-6 text-5xl leading-[1.05] text-mist-100 sm:text-6xl lg:text-7xl">
                 <span className="text-brand-gradient">Гарантия</span> защиты
