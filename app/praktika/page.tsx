@@ -21,7 +21,7 @@ export default function CasesPage() {
           {cases.map((c) => (
             <article key={c.slug} id={c.slug} className="card-surface scroll-mt-24 p-6 sm:p-8">
               <div className="flex items-center justify-between">
-                <span className="rounded-sm bg-accent-500/15 px-3 py-1 text-xs font-medium text-accent-400">
+                <span className="rounded-sm bg-brass-500/15 px-3 py-1 text-xs font-medium text-brass-400">
                   {c.category}
                 </span>
                 <span className="text-xs text-mist-500">{c.year}</span>
@@ -30,7 +30,7 @@ export default function CasesPage() {
                 {c.title}
               </h2>
               <p className="mt-3 leading-relaxed text-mist-500">{c.summary}</p>
-              <p className="mt-4 rounded-sm bg-ink-800/70 px-4 py-2.5 text-sm font-medium text-accent-400">
+              <p className="mt-4 rounded-sm bg-ink-800/70 px-4 py-2.5 text-sm font-medium text-brass-400">
                 ✓ {c.result}
               </p>
             </article>

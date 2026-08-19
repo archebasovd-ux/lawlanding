@@ -40,7 +40,7 @@ export default function AboutPage() {
       <section className="container-site py-20">
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
-            <p className="text-sm font-medium text-accent-400">О себе</p>
+            <p className="text-sm font-medium text-brass-400">О себе</p>
             <h1 className="mt-3 font-display text-5xl text-mist-100">
               {site.lawyer}
             </h1>
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
           <div className="space-y-6">
             <div className="relative">
-              <div className="bg-brand-gradient absolute -inset-3 rounded-sm opacity-15 blur-2xl" />
+              <div className="bg-brass-500 absolute -inset-3 rounded-sm opacity-15 blur-2xl" />
               <Image
                 src="/images/marina-office.jpg"
                 alt={`${site.lawyer} в кабинете`}
@@ -88,7 +88,7 @@ export default function AboutPage() {
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
             {principles.map((p) => (
               <div key={p.title} className="card-surface p-6">
-                <h3 className="text-lg font-semibold text-accent-400">
+                <h3 className="text-lg font-semibold text-brass-400">
                   {p.title}
                 </h3>
                 <p className="mt-2 leading-relaxed text-mist-500">{p.text}</p>

@@ -9,8 +9,8 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/icons/logo.png" alt="" className="logo-icon h-10 w-10 object-contain" />
-              <span className="text-brand-gradient text-sm font-bold tracking-wide">
+              <img src="/images/icons/brass/logo.png" alt="" className="h-10 w-10 object-contain" />
+              <span className="text-brass-500 text-sm font-bold tracking-wide">
                 ГАРАНТИЯ ЗАЩИТЫ
               </span>
             </div>
@@ -26,7 +26,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-mist-500 hover:text-accent-400"
+                    className="text-sm text-mist-500 hover:text-brass-400"
                   >
                     {item.label}
                   </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
                 <li key={s.slug}>
                   <Link
                     href={`/uslugi/${s.slug}`}
-                    className="text-sm text-mist-500 hover:text-accent-400"
+                    className="text-sm text-mist-500 hover:text-brass-400"
                   >
                     {s.title}
                   </Link>
@@ -57,13 +57,13 @@ export default function Footer() {
               <li>
                 <a
                   href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}
-                  className="hover:text-accent-400"
+                  className="hover:text-brass-400"
                 >
                   {site.phone}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${site.email}`} className="hover:text-accent-400">
+                <a href={`mailto:${site.email}`} className="hover:text-brass-400">
                   {site.email}
                 </a>
               </li>
@@ -72,7 +72,7 @@ export default function Footer() {
                   href={site.telegram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-accent-400"
+                  className="hover:text-brass-400"
                 >
                   Telegram {site.telegramHandle}
                 </a>
@@ -96,7 +96,7 @@ export default function Footer() {
           </ul>
           <Link
             href={legalBlock.privacyHref}
-            className="mt-3 inline-block text-xs text-accent-400 hover:underline"
+            className="mt-3 inline-block text-xs text-brass-400 hover:underline"
           >
             Политика конфиденциальности →
           </Link>

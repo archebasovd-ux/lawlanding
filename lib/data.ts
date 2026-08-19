@@ -45,7 +45,7 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "ugolovnye-dela",
-    icon: "/images/icons/ugolovnye.png",
+    icon: "/images/icons/brass/ugolovnye.png",
     title: "Уголовные дела",
     short: "Защита на стадии следствия и в суде",
     description:
@@ -59,7 +59,7 @@ export const services: Service[] = [
   },
   {
     slug: "grazhdanskie-spory",
-    icon: "/images/icons/grazhdanskie.png",
+    icon: "/images/icons/brass/grazhdanskie.png",
     title: "Гражданские споры",
     short: "Договорные, наследственные и иные гражданские споры",
     description:
@@ -73,7 +73,7 @@ export const services: Service[] = [
   },
   {
     slug: "semeynye-dela",
-    icon: "/images/icons/semeynye.png",
+    icon: "/images/icons/brass/semeynye.png",
     title: "Семейные дела",
     short: "Включая защиту прав детей",
     description:
@@ -87,7 +87,7 @@ export const services: Service[] = [
   },
   {
     slug: "sudebnoe-predstavitelstvo",
-    icon: "/images/icons/predstavitelstvo.png",
+    icon: "/images/icons/brass/predstavitelstvo.png",
     title: "Судебное представительство",
     short: "Представительство интересов в судах всех инстанций",
     description:
@@ -101,7 +101,7 @@ export const services: Service[] = [
   },
   {
     slug: "zashchita-reputacii",
-    icon: "/images/icons/reputaciya.png",
+    icon: "/images/icons/brass/reputaciya.png",
     title: "Защита чести и репутации",
     short: "В интернете и СМИ, оспаривание недостоверных сведений",
     description:
@@ -115,7 +115,7 @@ export const services: Service[] = [
   },
   {
     slug: "imushchestvennye-spory",
-    icon: "/images/icons/imushchestvo.png",
+    icon: "/images/icons/brass/imushchestvo.png",
     title: "Имущественные споры",
     short: "Иски от 1 000 000 ₽ и возмещение любого ущерба",
     description:
