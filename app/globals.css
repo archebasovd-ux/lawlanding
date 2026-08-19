@@ -274,15 +274,19 @@ body {
 
 /* ---------- Hero ---------- */
 /* Мягкое растворение портрета в фоне вместо резкого края */
+/* Три слоя: гасим левый край (уход в текст), низ и верх — чтобы на низких
+   экранах, где квадрат портрета ниже секции, не было видно резкой кромки. */
 .portrait-fade {
   -webkit-mask-image: linear-gradient(
       to left,
       black 62%,
       transparent 100%
     ),
-    linear-gradient(to bottom, black 88%, transparent 100%);
+    linear-gradient(to bottom, black 90%, transparent 100%),
+    linear-gradient(to top, black 88%, transparent 100%);
   mask-image: linear-gradient(to left, black 62%, transparent 100%),
-    linear-gradient(to bottom, black 88%, transparent 100%);
+    linear-gradient(to bottom, black 90%, transparent 100%),
+    linear-gradient(to top, black 88%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 }

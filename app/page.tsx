@@ -37,17 +37,18 @@ export default function Home() {
       {/* ============ HERO ============ */}
       <section className="relative overflow-hidden bg-ink-950">
         {/* Портрет справа, мягко растворяется в фоне */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[50%] lg:block">
-          <div className="portrait-fade relative h-full w-full">
-            <Image
-              src="/images/marina-portrait-hd.jpg"
-              alt={`Адвокат ${site.lawyer}`}
-              fill
-              priority
-              className="object-cover object-[center_14%]"
-              sizes="46vw"
-            />
-          </div>
+        {/* Блок повторяет квадратную пропорцию фото, поэтому маска совпадает
+            с краем картинки и не даёт резкой кромки. Прижат к низу, обрезка
+            при нехватке высоты идёт снизу — макушка не срезается никогда. */}
+        <div className="portrait-fade pointer-events-none absolute bottom-0 right-0 hidden aspect-square max-h-full w-[46%] lg:block">
+          <Image
+            src="/images/marina-portrait-hd.jpg"
+            alt={`Адвокат ${site.lawyer}`}
+            fill
+            priority
+            className="object-cover object-top"
+            sizes="46vw"
+          />
         </div>
         <HeroEffects />
 
