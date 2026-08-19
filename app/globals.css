@@ -324,3 +324,18 @@ body {
   color: var(--color-accent-500);
   font-size: 0.7em;
 }
+
+/* ---------- Портрет в hero (вариант 1) ---------- */
+/* Кадр квадратный, а секция широкая: гасим левый край, чтобы фото
+   уходило в фон под текст, и верх/низ — чтобы не было резкой кромки
+   на экранах, где квадрат ниже секции. */
+.hero-portrait {
+  -webkit-mask-image: linear-gradient(to left, black 58%, transparent 100%),
+    linear-gradient(to bottom, black 92%, transparent 100%),
+    linear-gradient(to top, black 90%, transparent 100%);
+  mask-image: linear-gradient(to left, black 58%, transparent 100%),
+    linear-gradient(to bottom, black 92%, transparent 100%),
+    linear-gradient(to top, black 90%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}

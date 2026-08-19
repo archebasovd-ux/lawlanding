@@ -19,16 +19,21 @@ export default function Home() {
     <>
       {/* ============ HERO на всю ширину ============ */}
       <section className="relative min-h-[85vh] overflow-hidden">
-        <Image
-          src="/images/hero-bg.jpg"
-          alt={`Адвокат ${site.lawyer}`}
-          fill
-          priority
-          className="object-cover object-[right_top]"
-          sizes="100vw"
-        />
+        {/* Реальный студийный портрет вместо AI-картинки с неоновыми полками.
+            Кадр квадратный, поэтому прижат вправо и к низу — визуально
+            повторяет прежнюю компоновку, но без нейросетевого фона. */}
+        <div className="hero-portrait pointer-events-none absolute bottom-0 right-0 hidden aspect-square max-h-full w-[46%] lg:block">
+          <Image
+            src="/images/marina-portrait-hd.jpg"
+            alt={`Адвокат ${site.lawyer}`}
+            fill
+            priority
+            className="object-cover object-top"
+            sizes="46vw"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-transparent" />
         <div className="dot-halo absolute inset-0 opacity-40" />
         {/* Кинематографика: параллакс-свечение, виньетка, плёночное зерно */}
         <HeroEffects />
@@ -56,6 +61,20 @@ export default function Home() {
                 <Link href="/uslugi" className="btn-ghost">
                   Услуги и практики
                 </Link>
+              </div>
+            </Reveal>
+
+            {/* На узких экранах абсолютный портрет скрыт — показываем его
+                в потоке, иначе первый экран остаётся без фотографии */}
+            <Reveal delay={420} className="lg:hidden">
+              <div className="relative mt-12 aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src="/images/marina-portrait-hd.jpg"
+                  alt={`Адвокат ${site.lawyer}`}
+                  fill
+                  className="object-cover object-[center_15%]"
+                  sizes="100vw"
+                />
               </div>
             </Reveal>
           </div>
