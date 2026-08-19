@@ -41,10 +41,14 @@ body {
   letter-spacing: 0.01em;
 }
 
-/* Было градиентом с фиолетом — теперь плоский королевский синий.
-   Именно этот цвет заказчик отметила в слове «Гарантия». */
+/* Градиент с уходом в фиолет — только в слове «Гарантия».
+   Точечно, на одном слове, он читается как фирменный приём.
+   В кнопках и плашках его не возвращаем: там он и давал «неон». */
 .text-brand-gradient {
-  color: var(--color-accent-500);
+  background: linear-gradient(92deg, #6d8bff 0%, #4a6cf7 45%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .bg-brand-gradient {
@@ -330,12 +334,10 @@ body {
    уходило в фон под текст, и верх/низ — чтобы не было резкой кромки
    на экранах, где квадрат ниже секции. */
 .hero-portrait {
-  -webkit-mask-image: linear-gradient(to left, black 58%, transparent 100%),
-    linear-gradient(to bottom, black 92%, transparent 100%),
-    linear-gradient(to top, black 90%, transparent 100%);
-  mask-image: linear-gradient(to left, black 58%, transparent 100%),
-    linear-gradient(to bottom, black 92%, transparent 100%),
-    linear-gradient(to top, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 52%, transparent 96%),
+    linear-gradient(to bottom, black 94%, transparent 100%);
+  mask-image: linear-gradient(to left, black 52%, transparent 96%),
+    linear-gradient(to bottom, black 94%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 }
