@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <p className="mt-2 leading-relaxed">
             {site.lawyer}, адвокат, реестровый номер {site.registryNumber} в
             едином реестре адвокатов Российской Федерации. Контакт:{" "}
-            <a href={`mailto:${site.email}`} className="text-brass-400 hover:underline">
+            <a href={`mailto:${site.email}`} className="text-accent-400 hover:underline">
               {site.email}
             </a>
             .

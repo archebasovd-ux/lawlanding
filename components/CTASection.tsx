@@ -37,7 +37,7 @@ export default function CTASection({
             </div>
           </div>
 
-          <div className="border border-brass-500/25 bg-ink-950 p-10 sm:p-12">
+          <div className="border border-accent-500/25 bg-ink-950 p-10 sm:p-12">
             <h3 className="font-display text-3xl text-mist-100">
               Первая оценка дела — бесплатно
             </h3>
@@ -51,7 +51,7 @@ export default function CTASection({
               </p>
               <a
                 href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}
-                className="font-display mt-2 block text-3xl text-brass-400 hover:text-brass-300"
+                className="font-display mt-2 block text-3xl text-accent-400 hover:text-accent-300"
               >
                 {site.phone}
               </a>

@@ -18,15 +18,15 @@ export default function Header() {
           <div className="flex items-center gap-7">
             <a
               href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}
-              className="flex items-center gap-2 transition-colors hover:text-brass-400"
+              className="flex items-center gap-2 transition-colors hover:text-accent-400"
             >
-              <PhoneIcon className="h-3.5 w-3.5 text-brass-500" /> {site.phone}
+              <PhoneIcon className="h-3.5 w-3.5 text-accent-500" /> {site.phone}
             </a>
             <a
               href={`mailto:${site.email}`}
-              className="flex items-center gap-2 transition-colors hover:text-brass-400"
+              className="flex items-center gap-2 transition-colors hover:text-accent-400"
             >
-              <MailIcon className="h-3.5 w-3.5 text-brass-500" /> {site.email}
+              <MailIcon className="h-3.5 w-3.5 text-accent-500" /> {site.email}
             </a>
           </div>
           <div className="flex items-center gap-7">
@@ -35,9 +35,9 @@ export default function Header() {
               href={site.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 transition-colors hover:text-brass-400"
+              className="flex items-center gap-2 transition-colors hover:text-accent-400"
             >
-              <TelegramIcon className="h-3.5 w-3.5 text-brass-500" /> {site.telegramHandle}
+              <TelegramIcon className="h-3.5 w-3.5 text-accent-500" /> {site.telegramHandle}
             </a>
           </div>
         </div>
@@ -49,13 +49,13 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/icons/brass/logo.png"
+              src="/images/icons/azure/logo.png"
               alt=""
               className="h-11 w-11 object-contain"
             />
             <span className="leading-tight">
               <span className="font-display block text-[1.35rem] font-semibold tracking-wide text-mist-100">
-                Гарантия <span className="text-brass-500">защиты</span>
+                <span className="text-accent-500">Гарантия</span> защиты
               </span>
             </span>
           </Link>
@@ -71,12 +71,12 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   className={`relative px-4 py-2 text-[0.82rem] font-medium tracking-wide transition-colors ${
-                    active ? "text-brass-400" : "text-mist-300 hover:text-brass-400"
+                    active ? "text-accent-400" : "text-mist-300 hover:text-accent-400"
                   }`}
                 >
                   {item.label}
                   {active && (
-                    <span className="absolute inset-x-4 -bottom-[1px] h-px bg-brass-500" />
+                    <span className="absolute inset-x-4 -bottom-[1px] h-px bg-accent-500" />
                   )}
                 </Link>
               );
@@ -92,7 +92,7 @@ export default function Header() {
           <button
             onClick={() => setOpen(!open)}
             aria-label="Меню"
-            className="rounded-sm border border-brass-500/35 p-2.5 text-brass-400 lg:hidden"
+            className="rounded-sm border border-accent-500/35 p-2.5 text-accent-400 lg:hidden"
           >
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
               {open ? (
@@ -112,7 +112,7 @@ export default function Header() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="block px-3 py-2.5 text-sm font-medium text-mist-300 hover:text-brass-400"
+              className="block px-3 py-2.5 text-sm font-medium text-mist-300 hover:text-accent-400"
             >
               {item.label}
             </Link>

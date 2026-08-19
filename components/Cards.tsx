@@ -11,7 +11,7 @@ export function ServiceCard({ service }: { service: Service }) {
       href={`/uslugi/${service.slug}`}
       className="card-surface group flex h-full flex-col p-8"
     >
-      <h3 className="font-display text-2xl leading-snug text-mist-100 transition-colors group-hover:text-brass-400">
+      <h3 className="font-display text-2xl leading-snug text-mist-100 transition-colors group-hover:text-accent-400">
         {service.title}
       </h3>
       <p className="mb-8 mt-3 text-sm leading-relaxed text-mist-500">
@@ -24,7 +24,7 @@ export function ServiceCard({ service }: { service: Service }) {
           alt=""
           className="card-icon h-11 w-11 object-contain"
         />
-        <span className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-brass-500 transition-transform group-hover:translate-x-1">
+        <span className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-accent-500 transition-transform group-hover:translate-x-1">
           Подробнее →
         </span>
       </div>
@@ -43,7 +43,7 @@ export function CaseCard({
       className="card-paper group flex h-full flex-col p-8"
     >
       <div className="flex items-center gap-4 text-[0.7rem] font-bold uppercase tracking-[0.16em]">
-        <span className="shrink-0 text-brass-600">{c.category}</span>
+        <span className="shrink-0 text-accent-600">{c.category}</span>
         <span className="h-px flex-1 bg-graphite-900/12" aria-hidden="true" />
         <span className="font-display shrink-0 text-base normal-case tracking-normal text-graphite-600">
           {c.year}
@@ -56,7 +56,7 @@ export function CaseCard({
 
       <p className="mt-3 text-sm leading-relaxed">{c.title}</p>
 
-      <span className="mt-auto pt-6 text-[0.7rem] font-bold uppercase tracking-[0.16em] text-brass-600 transition-transform group-hover:translate-x-1">
+      <span className="mt-auto pt-6 text-[0.7rem] font-bold uppercase tracking-[0.16em] text-accent-600 transition-transform group-hover:translate-x-1">
         Читать кейс →
       </span>
     </Link>
@@ -74,7 +74,7 @@ export function PostCard({
       className="card-paper group flex h-full flex-col p-7"
     >
       <div className="flex flex-wrap items-center gap-3 text-xs text-graphite-600">
-        <span className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-brass-600">
+        <span className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-accent-600">
           {post.category}
         </span>
         <span className="h-3 w-px bg-graphite-900/15" />
@@ -87,7 +87,7 @@ export function PostCard({
         </time>
         <span>· {post.readingTime}</span>
       </div>
-      <h3 className="font-display mt-4 text-xl leading-snug text-graphite-900 transition-colors group-hover:text-brass-600">
+      <h3 className="font-display mt-4 text-xl leading-snug text-graphite-900 transition-colors group-hover:text-accent-600">
         {post.title}
       </h3>
       <p className="mt-2.5 text-sm leading-relaxed">{post.excerpt}</p>

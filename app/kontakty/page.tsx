@@ -22,7 +22,7 @@ export default function ContactsPage() {
             href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}
             className="card-surface flex items-center gap-4 p-5 hover:-translate-y-0.5"
           >
-            <span className="flex h-11 w-11 items-center justify-center rounded-sm border border-brass-500/30 bg-ink-800/60">
+            <span className="flex h-11 w-11 items-center justify-center rounded-sm border border-accent-500/30 bg-ink-800/60">
               <PhoneIcon />
             </span>
             <span>
@@ -37,7 +37,7 @@ export default function ContactsPage() {
             rel="noopener noreferrer"
             className="card-surface flex items-center gap-4 p-5 hover:-translate-y-0.5"
           >
-            <span className="flex h-11 w-11 items-center justify-center rounded-sm border border-brass-500/30 bg-ink-800/60">
+            <span className="flex h-11 w-11 items-center justify-center rounded-sm border border-accent-500/30 bg-ink-800/60">
               <TelegramIcon />
             </span>
             <span>
@@ -54,7 +54,7 @@ export default function ContactsPage() {
             href={`mailto:${site.email}`}
             className="card-surface flex items-center gap-4 p-5 hover:-translate-y-0.5"
           >
-            <span className="flex h-11 w-11 items-center justify-center rounded-sm border border-brass-500/30 bg-ink-800/60">
+            <span className="flex h-11 w-11 items-center justify-center rounded-sm border border-accent-500/30 bg-ink-800/60">
               <MailIcon />
             </span>
             <span>
@@ -64,7 +64,7 @@ export default function ContactsPage() {
           </a>
 
           <div className="card-surface flex items-center gap-4 p-5">
-            <span className="flex h-11 w-11 items-center justify-center rounded-sm border border-brass-500/30 bg-ink-800/60">
+            <span className="flex h-11 w-11 items-center justify-center rounded-sm border border-accent-500/30 bg-ink-800/60">
               <PinIcon />
             </span>
             <span>

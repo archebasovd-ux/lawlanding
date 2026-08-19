@@ -5,14 +5,14 @@
  */
 export function Separator({
   align = "left",
-  tone = "brass",
+  tone = "accent",
   className = "",
 }: {
   align?: "left" | "center";
-  tone?: "brass" | "dark";
+  tone?: "accent" | "dark";
   className?: string;
 }) {
-  const color = tone === "brass" ? "#c9a961" : "#14171d";
+  const color = tone === "accent" ? "#4a6cf7" : "#14171d";
   return (
     <span
       className={`flex items-center gap-2 ${
@@ -56,7 +56,7 @@ export function SectionTitle({
       </h2>
       <Separator
         align={align}
-        tone={tone === "light" ? "brass" : "dark"}
+        tone={tone === "light" ? "accent" : "dark"}
         className="mt-5"
       />
       {children}

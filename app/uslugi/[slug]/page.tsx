@@ -40,7 +40,7 @@ export default async function ServicePage({
       <section className="container-site max-w-4xl py-20">
         <Link
           href="/uslugi"
-          className="text-sm text-mist-500 hover:text-brass-400"
+          className="text-sm text-mist-500 hover:text-accent-400"
         >
           ← Все услуги
         </Link>
@@ -51,7 +51,7 @@ export default async function ServicePage({
             <h1 className="font-display text-5xl text-mist-100">
               {service.title}
             </h1>
-            <p className="mt-2 text-lg text-brass-400">{service.short}</p>
+            <p className="mt-2 text-lg text-accent-400">{service.short}</p>
           </div>
         </div>
         <p className="mt-8 text-lg leading-relaxed text-mist-300">
@@ -65,7 +65,7 @@ export default async function ServicePage({
           <ul className="mt-4 space-y-3">
             {service.points.map((p) => (
               <li key={p} className="flex items-start gap-3 text-mist-300">
-                <span className="mt-1 text-brass-400">✓</span>
+                <span className="mt-1 text-accent-400">✓</span>
                 {p}
               </li>
             ))}
@@ -84,7 +84,7 @@ export default async function ServicePage({
                   <p className="mt-2 text-sm leading-relaxed text-mist-500">
                     {c.summary}
                   </p>
-                  <p className="mt-3 text-sm font-medium text-brass-400">
+                  <p className="mt-3 text-sm font-medium text-accent-400">
                     ✓ {c.result}
                   </p>
                 </div>

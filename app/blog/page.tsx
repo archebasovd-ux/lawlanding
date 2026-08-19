@@ -25,13 +25,13 @@ export default function BlogPage() {
         <article className="card-surface mt-10 overflow-hidden">
           <div className="p-8 sm:p-10">
             <div className="flex items-center gap-3 text-xs text-mist-500">
-              <span className="rounded-sm bg-brass-500/15 px-2.5 py-1 text-brass-400">
+              <span className="rounded-sm bg-accent-500/15 px-2.5 py-1 text-accent-400">
                 {featured.category}
               </span>
               <span>Новое</span>
             </div>
             <a href={`/blog/${featured.slug}`}>
-              <h2 className="mt-4 max-w-2xl text-2xl font-bold leading-snug text-mist-100 hover:text-brass-400 sm:text-3xl">
+              <h2 className="mt-4 max-w-2xl text-2xl font-bold leading-snug text-mist-100 hover:text-accent-400 sm:text-3xl">
                 {featured.title}
               </h2>
             </a>
@@ -40,7 +40,7 @@ export default function BlogPage() {
             </p>
             <a
               href={`/blog/${featured.slug}`}
-              className="mt-5 inline-block text-sm font-medium text-brass-400 hover:underline"
+              className="mt-5 inline-block text-sm font-medium text-accent-400 hover:underline"
             >
               Читать →
             </a>

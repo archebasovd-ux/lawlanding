@@ -1,7 +1,7 @@
 // Тонкие SVG-иконки в фирменном стиле для контактов и интерфейса
 type P = { className?: string };
 
-const base = "h-5 w-5 text-brass-400";
+const base = "h-5 w-5 text-accent-400";
 
 export function PhoneIcon({ className = base }: P) {
   return (

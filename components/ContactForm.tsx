@@ -39,7 +39,7 @@ export default function ContactForm() {
             id="name"
             required
             placeholder="Как к вам обращаться"
-            className="mt-1.5 w-full rounded-sm border border-ink-600/50 bg-ink-900 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500/60 focus:border-brass-500 focus:outline-none"
+            className="mt-1.5 w-full rounded-sm border border-ink-600/50 bg-ink-900 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500/60 focus:border-accent-500 focus:outline-none"
           />
         </div>
         <div>
@@ -50,7 +50,7 @@ export default function ContactForm() {
             id="phone"
             required
             placeholder="+7 ... или @username"
-            className="mt-1.5 w-full rounded-sm border border-ink-600/50 bg-ink-900 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500/60 focus:border-brass-500 focus:outline-none"
+            className="mt-1.5 w-full rounded-sm border border-ink-600/50 bg-ink-900 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500/60 focus:border-accent-500 focus:outline-none"
           />
         </div>
       </div>
@@ -62,7 +62,7 @@ export default function ContactForm() {
           id="message"
           rows={4}
           placeholder="Коротко опишите вопрос — этого хватит для первой оценки"
-          className="mt-1.5 w-full rounded-sm border border-ink-600/50 bg-ink-900 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500/60 focus:border-brass-500 focus:outline-none"
+          className="mt-1.5 w-full rounded-sm border border-ink-600/50 bg-ink-900 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500/60 focus:border-accent-500 focus:outline-none"
         />
       </div>
 
@@ -71,13 +71,13 @@ export default function ContactForm() {
           type="checkbox"
           checked={agree}
           onChange={(e) => setAgree(e.target.checked)}
-          className="mt-0.5 h-4 w-4 accent-brass-500"
+          className="mt-0.5 h-4 w-4 accent-accent-500"
         />
         <span>
           Соглашаюсь с{" "}
           <a
             href="/politika-konfidencialnosti"
-            className="text-brass-400 hover:underline"
+            className="text-accent-400 hover:underline"
           >
             политикой конфиденциальности
           </a>{" "}
@@ -99,7 +99,7 @@ export default function ContactForm() {
           href={site.telegram}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-brass-400 hover:underline"
+          className="text-accent-400 hover:underline"
         >
           Telegram {site.telegramHandle}
         </a>

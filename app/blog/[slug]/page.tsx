@@ -50,12 +50,12 @@ export default async function PostPage({
       <article className="container-site max-w-3xl py-20">
         <Link
           href="/blog"
-          className="text-sm text-mist-500 hover:text-brass-400"
+          className="text-sm text-mist-500 hover:text-accent-400"
         >
           ← Все статьи
         </Link>
         <div className="mt-6 flex items-center gap-3 text-sm text-mist-500">
-          <span className="rounded-sm bg-brass-500/15 px-3 py-1 text-xs text-brass-400">
+          <span className="rounded-sm bg-accent-500/15 px-3 py-1 text-xs text-accent-400">
             {post.category}
           </span>
           <time dateTime={post.date}>
@@ -85,7 +85,7 @@ export default async function PostPage({
               href={site.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brass-400 hover:underline"
+              className="text-accent-400 hover:underline"
             >
               Telegram {site.telegramHandle}
             </a>

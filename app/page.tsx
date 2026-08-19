@@ -66,10 +66,12 @@ export default function Home() {
               <Separator />
             </Reveal>
             <Reveal delay={100}>
+              {/* Заказчик отдельно отметил слово «Гарантия» в этом цвете —
+                  так называется её кабинет. Это и есть смысловой акцент hero. */}
               <h1 className="h-hero mt-7 text-mist-100">
-                Гарантия защиты
+                <span className="text-accent-500">Гарантия</span> защиты
                 <br />
-                <span className="text-brass-500">ваших интересов</span>
+                ваших интересов
                 <br />
                 в суде
               </h1>
@@ -121,7 +123,7 @@ export default function Home() {
                   }`}
                 >
                   <div className="px-2 lg:px-8">
-                    <p className="font-display text-4xl font-semibold text-brass-400">
+                    <p className="font-display text-4xl font-semibold text-accent-400">
                       {s.value}
                     </p>
                     <p className="mt-1.5 text-xs leading-snug text-mist-500">
@@ -153,7 +155,7 @@ export default function Home() {
                   />
                 </div>
                 {/* Карточка наезжает на угол фото — приём Attorneyster */}
-                <div className="relative -mt-16 ml-8 border-l-2 border-brass-500 bg-ink-950 px-9 py-8 sm:ml-16">
+                <div className="relative -mt-16 ml-8 border-l-2 border-accent-500 bg-ink-950 px-9 py-8 sm:ml-16">
                   <p className="font-display !text-mist-100 text-2xl leading-snug">
                     «Соглашение — это и есть гарантия: объём работы и стоимость
                     зафиксированы до её начала».
@@ -197,7 +199,7 @@ export default function Home() {
               <ul className="mt-10 space-y-7 border-t border-graphite-900/10 pt-9">
                 {principles.map((p, i) => (
                   <li key={p.title} className="flex gap-5">
-                    <span className="font-display shrink-0 text-2xl leading-none text-brass-500">
+                    <span className="font-display shrink-0 text-2xl leading-none text-accent-500">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span>
@@ -260,7 +262,7 @@ export default function Home() {
             {helpFormats.map((f, i) => (
               <Reveal key={f.title} delay={i * 70} className="h-full">
                 <div className="card-paper h-full p-8">
-                  <p className="font-display text-3xl text-brass-500">
+                  <p className="font-display text-3xl text-accent-500">
                     {String(i + 1).padStart(2, "0")}
                   </p>
                   <h3 className="font-display mt-4 text-xl text-graphite-900">
@@ -281,11 +283,11 @@ export default function Home() {
             <SectionTitle eyebrow="Процесс" title="Как я работаю" />
           </Reveal>
 
-          <div className="mt-14 grid gap-px bg-brass-500/15 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-px bg-accent-500/15 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((s, i) => (
               <Reveal key={s.num} delay={i * 90} className="h-full">
                 <div className="h-full bg-ink-950 p-8">
-                  <p className="font-display text-5xl leading-none text-brass-500/45">
+                  <p className="font-display text-5xl leading-none text-accent-500/45">
                     {s.num}
                   </p>
                   <h3 className="font-display mt-6 text-xl text-mist-100">
@@ -323,7 +325,7 @@ export default function Home() {
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     />
                     <div className="absolute inset-0 bg-ink-950/45" />
-                    <span className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-brass-500/70 bg-ink-950/70 text-brass-400 transition-transform group-hover:scale-110">
+                    <span className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent-500/70 bg-ink-950/70 text-accent-400 transition-transform group-hover:scale-110">
                       <PlayIcon />
                     </span>
                     <span className="absolute bottom-3 right-3 bg-ink-950/85 px-2 py-0.5 text-xs text-mist-300">
@@ -331,10 +333,10 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="p-6">
-                    <span className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-brass-500">
+                    <span className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-accent-500">
                       {v.topic}
                     </span>
-                    <h3 className="font-display mt-2.5 line-clamp-2 min-h-[3.2rem] text-lg leading-snug text-mist-100 group-hover:text-brass-400">
+                    <h3 className="font-display mt-2.5 line-clamp-2 min-h-[3.2rem] text-lg leading-snug text-mist-100 group-hover:text-accent-400">
                       {v.title}
                     </h3>
                   </div>
@@ -391,7 +393,7 @@ export default function Home() {
                   >
                     <path
                       d="M0 22V11.6C0 5.2 3.7 1 10.4 0l1.2 3.4C7.6 4.5 5.6 6.7 5.4 9.8H11V22H0Zm16.4 0V11.6C16.4 5.2 20.1 1 26.8 0L28 3.4c-4 1.1-6 3.3-6.2 6.4H27V22h-10.6Z"
-                      fill="#c9a961"
+                      fill="#4a6cf7"
                       fillOpacity="0.55"
                     />
                   </svg>
@@ -450,7 +452,7 @@ export default function Home() {
                     <summary className="cursor-pointer list-none font-medium text-mist-100">
                       <span className="flex items-center justify-between gap-4">
                         {item.q}
-                        <span className="text-xl text-brass-500 transition-transform group-open:rotate-45">
+                        <span className="text-xl text-accent-500 transition-transform group-open:rotate-45">
                           +
                         </span>
                       </span>
