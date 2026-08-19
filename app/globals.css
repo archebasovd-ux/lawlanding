@@ -11,7 +11,6 @@
   --color-accent-400: #6d8bff;
   --color-accent-500: #4a6cf7;
   --color-accent-600: #3b53d9;
-  --color-violet-450: #8b5cf6;
   --color-mist-100: #eef1ff;
   --color-mist-300: #c3cbe8;
   --color-mist-500: #8a93bd;
@@ -42,15 +41,14 @@ body {
   letter-spacing: 0.01em;
 }
 
+/* Было градиентом с фиолетом — теперь плоский королевский синий.
+   Именно этот цвет заказчик отметила в слове «Гарантия». */
 .text-brand-gradient {
-  background: linear-gradient(92deg, #6d8bff 0%, #4a6cf7 45%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-accent-500);
 }
 
 .bg-brand-gradient {
-  background: linear-gradient(92deg, #4a6cf7 0%, #5f5cf0 60%, #8b5cf6 100%);
+  background: var(--color-accent-500);
 }
 
 /* ---------- Кнопки: элегантные «пилюли» как в референсе ---------- */
@@ -66,13 +64,13 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
-  background: linear-gradient(92deg, #4a6cf7 0%, #5f5cf0 60%, #8b5cf6 100%);
-  box-shadow: 0 8px 30px rgba(74, 108, 247, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: var(--color-accent-500);
+  border: 1px solid var(--color-accent-500);
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(74, 108, 247, 0.5);
+  background: var(--color-accent-600);
+  border-color: var(--color-accent-600);
 }
 .btn-primary:disabled {
   opacity: 0.4;
@@ -117,13 +115,13 @@ body {
 
 /* ---------- Фоновые текстуры ---------- */
 .dot-grid {
-  background-image: radial-gradient(rgba(109, 139, 255, 0.16) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(109, 139, 255, 0.07) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
 /* Радиальная сетка точек как в референсе-макете */
 .dot-halo {
-  background-image: radial-gradient(rgba(109, 139, 255, 0.28) 1px, transparent 1.5px);
+  background-image: radial-gradient(rgba(109, 139, 255, 0.10) 1px, transparent 1.5px);
   background-size: 14px 14px;
   mask-image: radial-gradient(ellipse 60% 55% at 50% 40%, black 0%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 40%, black 0%, transparent 70%);
@@ -190,14 +188,14 @@ body {
 }
 .card-surface:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 44px rgba(10, 14, 39, 0.6), 0 0 0 1px rgba(109, 139, 255, 0.18);
+  box-shadow: 0 14px 36px rgba(6, 8, 24, 0.5);
 }
 .card-icon {
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
 }
 .card-surface:hover .card-icon {
   transform: scale(1.12) rotate(-4deg);
-  filter: drop-shadow(0 0 14px rgba(109, 139, 255, 0.55));
+  
 }
 
 /* Пульсация кнопки play в видео-блоке */
@@ -231,14 +229,12 @@ body {
   border-radius: 999px;
   background: var(--color-ink-950);
   border: 3px solid var(--color-accent-500);
-  box-shadow: 0 0 14px rgba(74, 108, 247, 0.6);
+  
 }
 
 /* Логотип: свечение, чтобы не сливался с тёмной шапкой */
 .logo-icon {
-  filter:
-    drop-shadow(0 0 8px rgba(109, 139, 255, 0.85))
-    drop-shadow(0 0 22px rgba(139, 92, 246, 0.5));
+  /* свечение убрано — оно читалось как неон */
 }
 
 /* «Бегущий» пунктир маршрута — как анимированный путь на карте */

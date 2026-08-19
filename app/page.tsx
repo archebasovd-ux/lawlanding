@@ -164,7 +164,7 @@ export default function Home() {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="#4a6cf7" />
-                <stop offset="1" stopColor="#8b5cf6" />
+                <stop offset="1" stopColor="#4a6cf7" />
               </linearGradient>
             </defs>
             <path
@@ -195,7 +195,7 @@ export default function Home() {
                     top: `calc(${pin.y}% - 24px)`,
                   }}
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-accent-500 bg-ink-950 font-display text-lg font-bold text-accent-400 shadow-[0_0_24px_rgba(74,108,247,0.75)]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-accent-500 bg-ink-950 font-display text-lg font-bold text-accent-400">
                     {i + 1}
                   </div>
                 </Reveal>
@@ -230,7 +230,7 @@ export default function Home() {
           {steps.map((s, i) => (
             <Reveal key={s.num} delay={i * 100}>
               <div className="relative pl-16">
-                <span className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full border-2 border-accent-500 bg-ink-950 font-display text-lg font-bold text-accent-400 shadow-[0_0_18px_rgba(74,108,247,0.6)]">
+                <span className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full border-2 border-accent-500 bg-ink-950 font-display text-lg font-bold text-accent-400">
                   {i + 1}
                 </span>
                 <h3 className="font-display pt-2 text-xl text-mist-100">
