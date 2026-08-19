@@ -12,7 +12,7 @@ export function Separator({
   tone?: "accent" | "dark";
   className?: string;
 }) {
-  const color = tone === "accent" ? "#4a6cf7" : "#14171d";
+  const color = tone === "accent" ? "#4063e8" : "#14171d";
   return (
     <span
       className={`flex items-center gap-2 ${

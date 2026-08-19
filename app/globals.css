@@ -2,38 +2,41 @@
 
 @theme {
   /* ============================================================
-     Палитра «Гарантия защиты» — вариант C
-     Синий акцент, который выбрал заказчик: слово «Гарантия» тем самым
-     цветом (#4a6cf7) — по названию кабинета. Фиолет, градиенты и
-     свечения не возвращаем: дешёвый вид давали они, а не сам синий.
-     Компоновка — как в варианте B (структура Attorneyster).
+     Палитра «Гарантия защиты» — вариант D
+     Заказчик: «тёмно-синий с королевско-синим», золото утомляет глаз.
+     Принцип: ни одного нейтрального цвета. Все тона — от почти
+     чёрно-синего до почти белого — лежат на одной синей оси, поэтому
+     палитра читается как одна семья, а не как «осветлённая тёмная».
+     Чёрного и чистого серого нет нигде.
      ============================================================ */
 
-  /* Тёмная база — глубокая ночь с синим подтоном */
-  --color-ink-950: #060a18;
-  --color-ink-900: #0a1024;
-  --color-ink-800: #101838;
-  --color-ink-700: #18224a;
-  --color-ink-600: #222e5e;
+  /* Тёмная лестница — настоящий navy, а не чёрный */
+  --color-ink-950: #0c1730;
+  --color-ink-900: #122043;
+  --color-ink-800: #1a2c57;
+  --color-ink-700: #24396b;
+  --color-ink-600: #2f4784;
 
-  /* Акцент — синий из референса заказчика */
-  --color-accent-300: #a9bcff;
-  --color-accent-400: #7b95ff;
-  --color-accent-500: #4a6cf7;
-  --color-accent-600: #2f4fd1;
+  /* Королевский синий — акцент */
+  --color-accent-300: #b3c6ff;
+  --color-accent-400: #7c9bff;
+  --color-accent-500: #4063e8;
+  --color-accent-600: #2a45b8;
 
-  /* Светлые секции — холодная бумага под синий акцент */
-  --color-paper: #f7f8fb;
-  --color-paper-alt: #eceff7;
+  /* Светлая лестница — холодная, с синим подтоном.
+     paper-alt даёт средний тон: без него светлые секции выглядят
+     выбеленными, а не спроектированными. */
+  --color-paper: #f4f7fd;
+  --color-paper-alt: #e7edf9;
 
   /* Текст на тёмном */
-  --color-mist-100: #f2f5fb;
-  --color-mist-300: #c0c8dc;
-  --color-mist-500: #97a0ba;
+  --color-mist-100: #eef3ff;
+  --color-mist-300: #b9c6e2;
+  --color-mist-500: #8695b5;
 
-  /* Текст на светлом */
-  --color-graphite-900: #12151f;
-  --color-graphite-600: #4b5263;
+  /* Текст на светлом — тёмно-синий вместо чёрного */
+  --color-graphite-900: #101a33;
+  --color-graphite-600: #47557a;
 
   --font-sans: var(--font-sans-var), "Manrope", system-ui, sans-serif;
   --font-display: var(--font-display-var), "Cormorant Garamond", Georgia, serif;
@@ -113,10 +116,10 @@ body {
 }
 
 .hairline {
-  border-color: rgba(74, 108, 247, 0.18);
+  border-color: rgba(64, 99, 232, 0.18);
 }
 .hairline-dark {
-  border-color: rgba(20, 23, 29, 0.12);
+  border-color: rgba(16, 26, 51, 0.12);
 }
 
 /* Eyebrow — акцентная подпись над заголовком */
@@ -166,13 +169,13 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-accent-400);
-  border: 1px solid rgba(74, 108, 247, 0.45);
+  border: 1px solid rgba(64, 99, 232, 0.45);
   background: transparent;
   transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
 }
 .btn-ghost:hover {
   border-color: var(--color-accent-500);
-  background: rgba(74, 108, 247, 0.08);
+  background: rgba(64, 99, 232, 0.08);
   color: var(--color-accent-300);
 }
 
@@ -199,26 +202,26 @@ body {
 
 /* ---------- Карточки ---------- */
 .card-surface {
-  background: rgba(17, 26, 46, 0.55);
-  border: 1px solid rgba(74, 108, 247, 0.14);
+  background: rgba(26, 44, 87, 0.5);
+  border: 1px solid rgba(64, 99, 232, 0.14);
   border-radius: 2px;
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 .card-surface:hover {
-  border-color: rgba(74, 108, 247, 0.4);
-  background: rgba(26, 37, 64, 0.6);
+  border-color: rgba(64, 99, 232, 0.4);
+  background: rgba(36, 57, 107, 0.6);
 }
 
 /* Карточка на светлой секции */
 .card-paper {
   background: #fff;
-  border: 1px solid rgba(20, 23, 29, 0.09);
+  border: 1px solid rgba(16, 26, 51, 0.09);
   border-radius: 2px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .card-paper:hover {
-  border-color: rgba(74, 108, 247, 0.55);
-  box-shadow: 0 14px 40px rgba(20, 23, 29, 0.08);
+  border-color: rgba(64, 99, 232, 0.55);
+  box-shadow: 0 14px 40px rgba(16, 26, 51, 0.08);
 }
 
 .card-icon {
@@ -232,7 +235,7 @@ body {
 /* Подсветка кейса при переходе по якорю */
 .card-surface:target,
 .card-paper:target {
-  border-color: rgba(74, 108, 247, 0.6);
+  border-color: rgba(64, 99, 232, 0.6);
 }
 
 /* ---------- Анимации появления ---------- */
@@ -260,7 +263,7 @@ body {
 /* ---------- Прогресс-бары (блок «Специализация в цифрах») ---------- */
 .progress-track {
   height: 3px;
-  background: rgba(74, 108, 247, 0.16);
+  background: rgba(64, 99, 232, 0.16);
 }
 .progress-fill {
   height: 3px;

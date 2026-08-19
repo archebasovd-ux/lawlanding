@@ -371,7 +371,7 @@ export default function Home() {
       </section>
 
       {/* ============ Отзывы ============ */}
-      <section className="bg-ink-950">
+      <section className="section-light-alt">
         <div className="container-site py-24">
           <Reveal>
             <SectionTitle
@@ -383,7 +383,7 @@ export default function Home() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2">
             {testimonials.map((t, i) => (
               <Reveal key={t.name} delay={i * 70} className="h-full">
-                <blockquote className="card-surface h-full p-9">
+                <blockquote className="card-paper h-full p-9">
                   <svg
                     width="28"
                     height="22"
@@ -393,16 +393,16 @@ export default function Home() {
                   >
                     <path
                       d="M0 22V11.6C0 5.2 3.7 1 10.4 0l1.2 3.4C7.6 4.5 5.6 6.7 5.4 9.8H11V22H0Zm16.4 0V11.6C16.4 5.2 20.1 1 26.8 0L28 3.4c-4 1.1-6 3.3-6.2 6.4H27V22h-10.6Z"
-                      fill="#4a6cf7"
-                      fillOpacity="0.55"
+                      fill="#4063e8"
+                      fillOpacity="0.4"
                     />
                   </svg>
-                  <p className="mt-5 leading-relaxed text-mist-300">{t.text}</p>
-                  <footer className="hairline mt-7 border-t pt-5 text-sm">
-                    <span className="font-display text-lg text-mist-100">
+                  <p className="mt-5 leading-relaxed">{t.text}</p>
+                  <footer className="hairline-dark mt-7 border-t pt-5 text-sm">
+                    <span className="font-display text-lg text-graphite-900">
                       {t.name}
                     </span>
-                    <span className="text-mist-500"> · {t.context}</span>
+                    <span className="text-graphite-600"> · {t.context}</span>
                   </footer>
                 </blockquote>
               </Reveal>
@@ -412,7 +412,7 @@ export default function Home() {
       </section>
 
       {/* ============ Блог ============ */}
-      <section className="section-light-alt">
+      <section className="section-light">
         <div className="container-site py-24">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal>
