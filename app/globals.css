@@ -277,12 +277,12 @@ body {
 .portrait-fade {
   -webkit-mask-image: linear-gradient(
       to left,
-      black 55%,
+      black 62%,
       transparent 100%
     ),
-    linear-gradient(to bottom, black 78%, transparent 100%);
-  mask-image: linear-gradient(to left, black 55%, transparent 100%),
-    linear-gradient(to bottom, black 78%, transparent 100%);
+    linear-gradient(to bottom, black 88%, transparent 100%);
+  mask-image: linear-gradient(to left, black 62%, transparent 100%),
+    linear-gradient(to bottom, black 88%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 }

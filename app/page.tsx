@@ -37,14 +37,14 @@ export default function Home() {
       {/* ============ HERO ============ */}
       <section className="relative overflow-hidden bg-ink-950">
         {/* Портрет справа, мягко растворяется в фоне */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block">
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[50%] lg:block">
           <div className="portrait-fade relative h-full w-full">
             <Image
-              src="/images/marina-portrait.jpg"
+              src="/images/marina-portrait-hd.jpg"
               alt={`Адвокат ${site.lawyer}`}
               fill
               priority
-              className="object-cover object-[center_20%]"
+              className="object-cover object-[center_14%]"
               sizes="46vw"
             />
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
             <Reveal delay={360} className="lg:hidden">
               <div className="relative mt-12 aspect-[3/2] w-full overflow-hidden">
                 <Image
-                  src="/images/marina-portrait.jpg"
+                  src="/images/marina-portrait-hd.jpg"
                   alt={`Адвокат ${site.lawyer}`}
                   fill
                   className="object-cover object-[center_18%]"
