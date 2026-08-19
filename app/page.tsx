@@ -22,14 +22,17 @@ export default function Home() {
         {/* Реальный студийный портрет вместо AI-картинки с неоновыми полками.
             Кадр квадратный, поэтому прижат вправо и к низу — визуально
             повторяет прежнюю компоновку, но без нейросетевого фона. */}
-        <div className="hero-portrait pointer-events-none absolute inset-y-0 right-0 hidden w-[60%] lg:block">
+        {/* Блок квадратный, как и сам кадр, и занимает всю высоту секции.
+            Поэтому фотография показывается целиком: ничего не срезается
+            сверху и нет «приближения» — видны и фигура, и полки справа. */}
+        <div className="hero-portrait pointer-events-none absolute bottom-0 right-0 hidden aspect-square h-full max-w-[64%] lg:block">
           <Image
             src="/images/marina-portrait-hd.jpg"
             alt={`Адвокат ${site.lawyer}`}
             fill
             priority
-            className="object-cover object-[center_28%]"
-            sizes="60vw"
+            className="object-cover object-bottom"
+            sizes="64vw"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/70 to-transparent" />
