@@ -15,6 +15,14 @@ const stats = [
   { value: "78/8339", label: "в реестре адвокатов РФ" },
 ];
 
+// Практические факты для блока «Об адвокате»: где, как и когда.
+// Намеренно без цифр — 17+/23+/реестр уже стоят в полосе под hero.
+const credentials = [
+  { value: "Очно", label: "Санкт-Петербург и Ленинградская область" },
+  { value: "Онлайн", label: "консультации по всей России" },
+  { value: "По записи", label: "Пн–Пт, 10:00–19:00" },
+];
+
 // Принципы работы — блок «Об адвокате». Заменяет собой повтор портрета.
 const principles = [
   {
@@ -130,40 +138,38 @@ export default function Home() {
       {/* ============ Об адвокате — светлая секция ============ */}
       <section className="section-light">
         <div className="container-site py-24">
-          <div className="grid items-center gap-14 lg:grid-cols-2">
+          <div className="grid items-start gap-14 lg:grid-cols-2 lg:gap-20">
+            {/* Левая колонка — предметная деталь профессии.
+                Цифры отсюда убраны: 17+/23+/реестр уже стоят в полосе под hero. */}
             <Reveal>
-              <div className="max-w-md">
-                {/* Реестровая плашка — знак доверия, поднят из подвала наверх */}
-                <div className="border border-brass-500/40 bg-ink-950 px-9 py-8">
-                  <p className="!text-brass-500 text-[0.68rem] uppercase tracking-[0.2em]">
-                    Реестровый номер
-                  </p>
-                  <p className="font-display !text-mist-100 mt-2 text-5xl">
-                    {site.registryNumber}
-                  </p>
-                  <p className="mt-2 text-sm !text-mist-500">
-                    Единый реестр адвокатов Российской Федерации
+              <div className="relative max-w-lg">
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src="/images/texture-seal.jpg"
+                    alt="Соглашение об оказании юридической помощи, перо и печать"
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 45vw, 90vw"
+                  />
+                </div>
+                {/* Карточка наезжает на угол фото — приём Attorneyster */}
+                <div className="relative -mt-16 ml-8 border-l-2 border-brass-500 bg-ink-950 px-9 py-8 sm:ml-16">
+                  <p className="font-display !text-mist-100 text-2xl leading-snug">
+                    «Соглашение — это и есть гарантия: объём работы и стоимость
+                    зафиксированы до её начала».
                   </p>
                 </div>
 
-                {/* Принципы работы — то, что отличает адвоката от «юруслуг» */}
-                <ul className="mt-8 space-y-6">
-                  {principles.map((p, i) => (
-                    <li key={p.title} className="flex gap-5">
-                      <span className="font-display shrink-0 text-2xl leading-none text-brass-500">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span>
-                        <span className="font-display block text-lg text-graphite-900">
-                          {p.title}
-                        </span>
-                        <span className="mt-1 block text-sm leading-relaxed text-graphite-600">
-                          {p.text}
-                        </span>
-                      </span>
-                    </li>
+                <div className="mt-10 grid grid-cols-3 gap-5">
+                  {credentials.map((c) => (
+                    <div key={c.label} className="border-t border-graphite-900/15 pt-4">
+                      <p className="font-display text-lg leading-tight text-graphite-900">
+                        {c.value}
+                      </p>
+                      <p className="mt-1 text-xs leading-snug">{c.label}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </Reveal>
 
@@ -174,28 +180,39 @@ export default function Home() {
                 title={site.lawyer}
               />
               <p className="measure mt-7 leading-relaxed">
-                Адвокатская практика — более 17 лет, юридическая — более 23 лет.
                 Веду дела в судах общей юрисдикции и арбитражных судах
                 Санкт-Петербурга и Ленинградской области, консультирую онлайн по
-                всей России.
+                всей России. Уголовная защита, семейные и имущественные споры,
+                защита чести и деловой репутации.
               </p>
               <p className="measure mt-4 leading-relaxed">
-                В работе придерживаюсь простого правила: доверитель с самого
-                начала знает реальные перспективы дела, стоимость и порядок
-                работы. Никаких обещаний результата, которые невозможно
-                выполнить.
+                Статус адвоката — это не только право работать по уголовным
+                делам. Это адвокатская тайна, которую нельзя истребовать, право
+                делать адвокатский запрос и ответственность перед палатой за
+                каждое дело. Юридическая фирма без этого статуса таких гарантий
+                не даёт.
               </p>
-              <div className="mt-9 grid grid-cols-2 gap-6 border-t border-graphite-900/10 pt-8">
-                <div>
-                  <p className="font-display text-4xl text-graphite-900">17+</p>
-                  <p className="mt-1 text-sm">лет адвокатской практики</p>
-                </div>
-                <div>
-                  <p className="font-display text-4xl text-graphite-900">23+</p>
-                  <p className="mt-1 text-sm">года в юриспруденции</p>
-                </div>
-              </div>
-              <Link href="/o-sebe" className="btn-dark mt-9">
+
+              {/* Принципы работы — то, что отличает адвоката от «юруслуг» */}
+              <ul className="mt-10 space-y-7 border-t border-graphite-900/10 pt-9">
+                {principles.map((p, i) => (
+                  <li key={p.title} className="flex gap-5">
+                    <span className="font-display shrink-0 text-2xl leading-none text-brass-500">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span>
+                      <span className="font-display block text-lg text-graphite-900">
+                        {p.title}
+                      </span>
+                      <span className="mt-1 block text-sm leading-relaxed text-graphite-600">
+                        {p.text}
+                      </span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <Link href="/o-sebe" className="btn-dark mt-10">
                 Подробнее обо мне
               </Link>
             </Reveal>
